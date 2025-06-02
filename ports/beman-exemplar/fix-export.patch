@@ -1,7 +1,8 @@
 --- a/src/beman/exemplar/CMakeLists.txt	2025-03-05 06:01:47.000000000 -0500
 +++ b/src/beman/exemplar/CMakeLists.txt	2025-05-09 19:34:26.861986882 -0400
-@@ -1,13 +1,12 @@
- # SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+@@ -2,14 +2,13 @@
+
+ include(GNUInstallDirs)
 
 -add_library(beman.exemplar)
 +add_library(beman.exemplar INTERFACE)
@@ -14,11 +15,11 @@
 -    PUBLIC
 +    INTERFACE
          FILE_SET HEADERS
-         BASE_DIRS ${PROJECT_SOURCE_DIR}/include
-         FILES ${PROJECT_SOURCE_DIR}/include/beman/exemplar/identity.hpp
-@@ -21,9 +20,6 @@
+         BASE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/../../../include
+         FILES
+@@ -24,9 +23,6 @@
  install(
-     TARGETS beman.exemplar
+     TARGETS beman.exemplar COMPONENT beman.exemplar
      EXPORT beman.exemplar
 -    DESTINATION
 -    ${CMAKE_INSTALL_LIBDIR}$<$<CONFIG:Debug>:/debug>
@@ -26,21 +27,21 @@
      FILE_SET HEADERS DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
  )
 
-@@ -38,7 +34,7 @@
+@@ -41,7 +37,7 @@
      )
 
      write_basic_package_version_file(
--        "${PROJECT_BINARY_DIR}/cmake/${PROJECT_NAME}/${PROJECT_NAME}-version.cmake"
-+        "${PROJECT_BINARY_DIR}/cmake/${PROJECT_NAME}/${PROJECT_NAME}-config-version.cmake"
+-        "${CMAKE_CURRENT_BINARY_DIR}/beman.exemplar-version.cmake"
++        "${CMAKE_CURRENT_BINARY_DIR}/beman.exemplar-config-version.cmake"
          VERSION ${PROJECT_VERSION}
-         COMPATIBILITY SameMajorVersion
+         COMPATIBILITY ExactVersion
      )
-@@ -46,7 +42,7 @@
+@@ -49,7 +45,7 @@
      install(
          FILES
-             "${PROJECT_BINARY_DIR}/cmake/${PROJECT_NAME}/${PROJECT_NAME}-config.cmake"
--            "${PROJECT_BINARY_DIR}/cmake/${PROJECT_NAME}/${PROJECT_NAME}-version.cmake"
-+            "${PROJECT_BINARY_DIR}/cmake/${PROJECT_NAME}/${PROJECT_NAME}-config-version.cmake"
-         DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}"
-         COMPONENT development
+             "${CMAKE_CURRENT_BINARY_DIR}/beman.exemplar-config.cmake"
+-            "${CMAKE_CURRENT_BINARY_DIR}/beman.exemplar-version.cmake"
++            "${CMAKE_CURRENT_BINARY_DIR}/beman.exemplar-config-version.cmake"
+         DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/beman.exemplar"
+         COMPONENT beman.exemplar
      )
