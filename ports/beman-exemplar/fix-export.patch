@@ -1,6 +1,6 @@
---- a/src/beman/exemplar/CMakeLists.txt	2025-02-20 15:57:28.000000000 -0500
-+++ b/src/beman/exemplar/CMakeLists.txt	2025-05-09 18:59:51.279809525 -0400
-@@ -1,25 +1,42 @@
+--- a/src/beman/exemplar/CMakeLists.txt	2025-03-05 06:01:47.000000000 -0500
++++ b/src/beman/exemplar/CMakeLists.txt	2025-05-09 19:34:26.861986882 -0400
+@@ -1,13 +1,12 @@
  # SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
 -add_library(beman.exemplar)
@@ -8,7 +8,7 @@
  add_library(beman::exemplar ALIAS beman.exemplar)
 
 -target_sources(beman.exemplar PRIVATE identity.cpp)
--
+
  target_sources(
      beman.exemplar
 -    PUBLIC
@@ -16,38 +16,31 @@
          FILE_SET HEADERS
          BASE_DIRS ${PROJECT_SOURCE_DIR}/include
          FILES ${PROJECT_SOURCE_DIR}/include/beman/exemplar/identity.hpp
- )
-
--set_target_properties(beman.exemplar PROPERTIES VERIFY_INTERFACE_HEADER_SETS ON)
-+set_target_properties(beman.exemplar PROPERTIES VERIFY_INTERFACE_HEADER_SETS ON
-+    EXPORT_NAME exemplar
-+)
-
+@@ -21,9 +20,6 @@
  install(
      TARGETS beman.exemplar
      EXPORT beman.exemplar
 -    DESTINATION
--    $<$<CONFIG:Debug>:debug/>${CMAKE_INSTALL_LIBDIR}
--    RUNTIME DESTINATION $<$<CONFIG:Debug>:debug/>${CMAKE_INSTALL_BINDIR}
+-    ${CMAKE_INSTALL_LIBDIR}$<$<CONFIG:Debug>:/debug>
+-    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}$<$<CONFIG:Debug>:/debug>
      FILE_SET HEADERS DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
  )
-+
-+include(CMakePackageConfigHelpers)
-+
-+write_basic_package_version_file(
-+    ${CMAKE_CURRENT_BINARY_DIR}/beman.exemplar-config-version.cmake
-+    VERSION 1.0.0
-+    COMPATIBILITY ExactVersion
-+)
-+
-+install(
-+    FILES ${CMAKE_CURRENT_BINARY_DIR}/beman.exemplar-config-version.cmake
-+    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/beman.exemplar
-+)
-+
-+install(
-+    EXPORT beman.exemplar
-+    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/beman.exemplar
-+    NAMESPACE beman::
-+    FILE beman.exemplar-config.cmake
-+)
+
+@@ -38,7 +34,7 @@
+     )
+
+     write_basic_package_version_file(
+-        "${PROJECT_BINARY_DIR}/cmake/${PROJECT_NAME}/${PROJECT_NAME}-version.cmake"
++        "${PROJECT_BINARY_DIR}/cmake/${PROJECT_NAME}/${PROJECT_NAME}-config-version.cmake"
+         VERSION ${PROJECT_VERSION}
+         COMPATIBILITY SameMajorVersion
+     )
+@@ -46,7 +42,7 @@
+     install(
+         FILES
+             "${PROJECT_BINARY_DIR}/cmake/${PROJECT_NAME}/${PROJECT_NAME}-config.cmake"
+-            "${PROJECT_BINARY_DIR}/cmake/${PROJECT_NAME}/${PROJECT_NAME}-version.cmake"
++            "${PROJECT_BINARY_DIR}/cmake/${PROJECT_NAME}/${PROJECT_NAME}-config-version.cmake"
+         DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}"
+         COMPONENT development
+     )
