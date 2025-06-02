@@ -1,0 +1,14 @@
+{
+  "name": "beman-exemplar",
+  "version-semver": "1.0.0",
+  "description": "A Beman Library Exemplar (Template)",
+  "homepage": "https://github.com/bemanproject/exemplar",
+  "documentation": "https://github.com/bemanproject/exemplar",
+  "license": "Apache-2.0 WITH LLVM-exception",
+  "dependencies": [
+    {
+      "name": "beman-cmake-tools",
+      "host": true
+    }
+  ]
+}
