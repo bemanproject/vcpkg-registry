@@ -11,6 +11,10 @@
     "beman-transform-view": {
       "baseline": "0.1.0",
       "port-version": 0
+    },
+    "beman-utf-view": {
+      "baseline": "0.1.0",
+      "port-version": 0
     }
   }
 }
