@@ -1,13 +1,16 @@
 {
   "name": "beman-exemplar",
-  "version-semver": "2.1.1",
+  "version-semver": "2.2.1",
   "description": "A Beman Library Exemplar (Template)",
   "homepage": "https://github.com/bemanproject/exemplar",
-  "documentation": "https://github.com/bemanproject/exemplar",
   "license": "Apache-2.0 WITH LLVM-exception",
   "dependencies": [
     {
-      "name": "beman-cmake-tools",
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
       "host": true
     }
   ]
