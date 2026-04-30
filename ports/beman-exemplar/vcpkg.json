@@ -1,7 +1,7 @@
 {
   "name": "beman-exemplar",
-  "version-semver": "2.2.1",
-  "description": "A Beman Library Exemplar (Template)",
+  "version-semver": "2.3.0",
+  "description": "A Beman Library Exemplar",
   "homepage": "https://github.com/bemanproject/exemplar",
   "license": "Apache-2.0 WITH LLVM-exception",
   "dependencies": [
