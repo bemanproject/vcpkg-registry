@@ -7,6 +7,10 @@
     "beman-exemplar": {
       "baseline": "2.3.0",
       "port-version": 0
+    },
+    "beman-transform-view": {
+      "baseline": "0.1.0",
+      "port-version": 0
     }
   }
 }
