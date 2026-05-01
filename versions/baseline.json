@@ -67,6 +67,10 @@
     "beman-copyable-function": {
       "baseline": "0.1.0",
       "port-version": 0
+    },
+    "beman-cache-latest": {
+      "baseline": "0.1.0",
+      "port-version": 0
     }
   }
 }
