@@ -55,6 +55,10 @@
     "beman-any-view": {
       "baseline": "1.1.0",
       "port-version": 0
+    },
+    "beman-elide": {
+      "baseline": "0.1.0",
+      "port-version": 0
     }
   }
 }
