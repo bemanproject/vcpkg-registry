@@ -31,6 +31,10 @@
     "beman-cstring-view": {
       "baseline": "0.1.0",
       "port-version": 0
+    },
+    "beman-take-before": {
+      "baseline": "0.1.0",
+      "port-version": 0
     }
   }
 }
