@@ -19,6 +19,10 @@
     "beman-at-most": {
       "baseline": "0.1.0",
       "port-version": 0
+    },
+    "beman-monadics": {
+      "baseline": "0.1.0",
+      "port-version": 0
     }
   }
 }
