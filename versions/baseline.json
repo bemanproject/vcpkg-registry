@@ -47,6 +47,10 @@
     "beman-scan-view": {
       "baseline": "0.1.0",
       "port-version": 0
+    },
+    "beman-indices-view": {
+      "baseline": "0.1.0",
+      "port-version": 0
     }
   }
 }
