@@ -27,6 +27,10 @@
     "beman-inplace-vector": {
       "baseline": "0.1.0",
       "port-version": 0
+    },
+    "beman-cstring-view": {
+      "baseline": "0.1.0",
+      "port-version": 0
     }
   }
 }
