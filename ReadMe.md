@@ -31,21 +31,6 @@ a default registry if desired.
 
 ## Adding / Updating a port
 
-The Beman registry is a standard vcpkg registy, thus adding a port requires
-the standard steps documented in [the vcpkg maintainer guide](https://learn.microsoft.com/en-us/vcpkg/contributing/maintainer-guide).
-
-The Python script `update_port.py` handles some of the monotenous work of
-updating version numbers and SHA512 hashes, and when used in conjuction with
-the `vcpkg x-add-version` script for managing the version database can be
-used to quickly update ports.
-
-However these are presented without further commentary, it is not intended for
-those unfamiliar with vcpkg registry maintenance to update ports at this time.
-
-## Note for maintainers
-
-Beman project uses it own fork of the `vcpkg-cmake*` host dependencies to allow
-it to stand alone as a default registry. These are vendored under
-`beman-cmake-tools`. Generally speaking these mirror the functions of
-`vcpkg-cmake` and `vcpkg-cmake-config` exactly, except renamed to
-`beman_cmake_*`.
+This is handled automatically by the `reusable-beman-vcpkg-release.yml` workflow in
+https://github.com/bemanproject/infra-workflows, which triggers when a new release is
+created.
