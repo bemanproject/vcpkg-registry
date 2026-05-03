@@ -1,14 +1,25 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO bemanproject/transform_view
-    REF "v0.1.0"
-    SHA512 9709c9e0d2252a20c40dd882e4d3f15db98817594f4b0542216fb4c646102bf6d6eeffab0fc10a57ecf01c794ed80208e1894137a92496b152b01afccecfb1aa
+    REF "enolan_modules3"
+    SHA512 fb24446f6f53a06c22ccded2c33d11ad0c0ddcbba31dbf6716e7d761a11e1078d7393eca3959eae218584525467118934deef3972c61b3c49dddfab43a681363
     HEAD_REF main
 )
+
+vcpkg_check_features(
+    OUT_FEATURE_OPTIONS FEATURE_OPTIONS
+    FEATURES
+        modules   BEMAN_TRANSFORM_VIEW_USE_MODULES
+)
+
+if("modules" IN_LIST FEATURES)
+    list(APPEND FEATURE_OPTIONS -DCMAKE_CXX_STANDARD=23)
+endif()
 
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
     OPTIONS
+        ${FEATURE_OPTIONS}
         -DBEMAN_TRANSFORM_VIEW_BUILD_TESTS=OFF
         -DBEMAN_TRANSFORM_VIEW_BUILD_EXAMPLES=OFF
 )
