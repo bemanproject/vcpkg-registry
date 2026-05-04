@@ -1,6 +1,6 @@
 {
   "name": "beman-exemplar",
-  "version-semver": "2.3.0",
+  "version-semver": "2.4.0",
   "description": "A Beman Library Exemplar",
   "homepage": "https://github.com/bemanproject/exemplar",
   "license": "Apache-2.0 WITH LLVM-exception",
@@ -13,5 +13,10 @@
       "name": "vcpkg-cmake-config",
       "host": true
     }
-  ]
+  ],
+  "features": {
+    "modules": {
+      "description": "Provide beman.exemplar as a C++ module"
+    }
+  }
 }
