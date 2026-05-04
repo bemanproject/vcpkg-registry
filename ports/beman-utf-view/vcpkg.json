@@ -1,6 +1,6 @@
 {
   "name": "beman-utf-view",
-  "version-semver": "0.1.0",
+  "version-semver": "0.2.0",
   "description": "C++29 UTF Transcoding Views",
   "homepage": "https://github.com/bemanproject/utf_view",
   "license": "Apache-2.0 WITH LLVM-exception",
@@ -14,5 +14,16 @@
       "host": true
     },
     "beman-transform-view"
-  ]
+  ],
+  "features": {
+    "modules": {
+      "description": "Provide beman.utf_view as a C++ module",
+      "dependencies": [
+        {
+          "name": "beman-transform-view",
+          "features": [ "modules" ]
+        }
+      ]
+    }
+  }
 }
