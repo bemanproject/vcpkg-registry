@@ -1,6 +1,6 @@
 {
   "name": "beman-monadics",
-  "version-semver": "0.1.0",
+  "version-semver": "1.0.0",
   "description": "Freestanding monadic operations",
   "homepage": "https://github.com/bemanproject/monadics",
   "license": "Apache-2.0 WITH LLVM-exception",

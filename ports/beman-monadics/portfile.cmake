@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO bemanproject/monadics
-    REF "v0.1.0"
-    SHA512 f66e4568a33ee6305b88cc7d744d568cb77adb8332a98b7079c19d877223a65bd7eff47adc9f2eb4646b6dfce92e047dfcf329e88c028e103fa3e377ce999e09
+    REF "v1.0.0"
+    SHA512 01f3b11e9c0e1647c65ba27149286b8dccedbfaabc8e2d6e5776f74aea2ab00d774e68d1563cc191b52933f4be23042e5fdeb13f35c4e95f536084ed6c447d2a
     HEAD_REF main
 )
 
