@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO bemanproject/utf_view
-    REF "v0.2.0"
-    SHA512 ba69c3330c9cc8d0a8d38d590b1b3c36747568472b1a35d90302b08730de752ee4d84fd39ee526b5f15bc72bf05e148633217f9d27624a8a0dae33482e25aa99
+    REF "v0.3.0"
+    SHA512 d3430f9101fa4d2afe79eac17d23a0d32bfbb8d90751cc7b0d0236de8b860e91b09c857fd5d4277addfdec8bd4d28edd5dec8bdc85c9bdc0a9df607838284072
     HEAD_REF main
 )
 

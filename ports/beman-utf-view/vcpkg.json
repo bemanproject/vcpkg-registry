@@ -1,6 +1,6 @@
 {
   "name": "beman-utf-view",
-  "version-semver": "0.2.0",
+  "version-semver": "0.3.0",
   "description": "C++29 UTF Transcoding Views",
   "homepage": "https://github.com/bemanproject/utf_view",
   "license": "Apache-2.0 WITH LLVM-exception",
