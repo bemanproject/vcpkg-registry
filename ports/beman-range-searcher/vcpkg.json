@@ -1,6 +1,6 @@
 {
   "name": "beman-range-searcher",
-  "version-semver": "0.1.0",
+  "version-semver": "0.2.0",
   "description": "Implementation of range-based searchers and range overloads of Searcher-based std::search",
   "homepage": "https://github.com/bemanproject/range_searcher",
   "license": "Apache-2.0 WITH LLVM-exception",
@@ -13,5 +13,10 @@
       "name": "vcpkg-cmake-config",
       "host": true
     }
-  ]
+  ],
+  "features": {
+    "modules": {
+      "description": "Provide beman.range_searcher as a C++ module"
+    }
+  }
 }
