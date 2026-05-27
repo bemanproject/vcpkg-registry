@@ -1,8 +1,9 @@
+# SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO bemanproject/transform_view
-    REF "v0.2.0"
-    SHA512 e4dc5584d7e4c05eda0fcaab2599d7db2cbf6739cb66059994f6e38145e6ce6d7f3c1e5b527f87f31d7090d081015214487df8557a057941fc362bf05e124fd4
+    REF "v0.2.1"
+    SHA512 6479bd542e21fce4cfe189c7ac505969f7fc7c5fd4b64e2bfa11a7e062b21801ad226c2c65e031e526d8691c3ace3c96f5cf4e8aeb2f5fcf31d5caeb41787e2e
     HEAD_REF main
 )
 
