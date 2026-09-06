@@ -1,0 +1,22 @@
+{
+  "name": "beman-emplace-from",
+  "version-semver": "1.0.0",
+  "description": "Utility to enable emplacement of immovable objects returned by a function via guaranteed RVO.",
+  "homepage": "https://github.com/bemanproject/emplace_from",
+  "license": "Apache-2.0 WITH LLVM-exception",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ],
+  "features": {
+    "modules": {
+      "description": "Provide beman.emplace_from as a C++ module"
+    }
+  }
+}

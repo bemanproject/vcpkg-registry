@@ -75,6 +75,10 @@
     "beman-closed-view": {
       "baseline": "0.1.0",
       "port-version": 0
+    },
+    "beman-emplace-from": {
+      "baseline": "1.0.0",
+      "port-version": 0
     }
   }
 }
