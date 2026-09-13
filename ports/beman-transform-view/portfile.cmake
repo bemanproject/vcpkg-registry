@@ -2,8 +2,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO bemanproject/transform_view
-    REF "v0.2.1"
-    SHA512 6479bd542e21fce4cfe189c7ac505969f7fc7c5fd4b64e2bfa11a7e062b21801ad226c2c65e031e526d8691c3ace3c96f5cf4e8aeb2f5fcf31d5caeb41787e2e
+    REF "v0.2.2"
+    SHA512 01f219abb76f1af6a4a62bac8ef33c3e676a71d065db398a05f1bffb1f97198e40c3e233a5de1b0e12fe65d13ad05ed862f343f906caf35ec39fcd31f2975418
     HEAD_REF main
 )
 
