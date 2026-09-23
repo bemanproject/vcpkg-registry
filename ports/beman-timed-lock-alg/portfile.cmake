@@ -1,8 +1,9 @@
+# SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO bemanproject/timed_lock_alg
-    REF "v1.1.0"
-    SHA512 0311af1e8c92e7b92bc31bb6c2fa199deb7347ca2e083905859e9bb2f665239876cc62ecdef0e3a17e1499bb832d122f93a994c7a4eee5cfb85d2cb62ebcf908
+    REF "v1.2.0"
+    SHA512 6765de90f9d3fc72ca856a29f0da68de17f004ccd1f6c94d6fe46719918b4f038e20063760a2c01b76d7e58fade983c914c39c1e18d6670319193022dd6d5a0b
     HEAD_REF main
 )
 
